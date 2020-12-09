@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+.hero {
+    background: url(/images/) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+      
+}
+
+.parallax {
+    min-height: 400px;
+    background: transparent;
+}
+
+div .images p {
+    color: #ffffff;
+    font-size: 50px;
+    padding: 10px;
+
+    
+    
+}
+
+img {
+    
+    width: 100vw;
+    height: 50vh;
+}
+
+footer p {
+    font-size: 20px;
+    margin: 0 0 0 650px;
+}
+
+
+
+
+
+
+
