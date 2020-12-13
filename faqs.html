@@ -1,175 +1,265 @@
-<html class="mouse-out"><head>
-    <title>FAQS| FirstHand Therapy</title>
+<!DOCTYPE html>
+<html lang="en">
+<title>Home | FirstHand Therapy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3css.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- The default layout, resets and and text styling -->
     <link href="css/main.css" rel="stylesheet">
     <!-- Custom styling -->
     <link href="css/scroll.css" rel="stylesheet">
     <link href="css/modal.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/w3css.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-  width: 100vw;
-  overflow-x: hidden;
-}
-
-.container {
-
-height: 100vh;
-}
-
-.logo {
-  width: 150px;
-  width: 150px;
-  float: right;
-  position: relative;
-  
-  
-}
-
-
-@media only screen and (max-device-width: 1200px) {
-  #sidebar {
-    display: none;
-  }
-
-  .logo {
-    display: none;
-  }
-}
-
-@media only screen and (min-device-width: 1850px) {
-
-  #sidebar {
-    display: none;
-  }
-}
-
-</style>
+    <style>
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+      body, html {
+        height: 100%;
+        color: #777;
+        width: 100vw;
+      }
+      
+      .container {
+      
+        height: 100vh;
+      }
+      
+      .logo {
+        width: 150px;
+        width: 150px;
+        float: right;
+        position: relative;
+        
+        
+      }
+      
+      .map {
+      
+        
+      }
+      
+      /* Create a Parallax Effect */
+      .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      /* First image (Logo. Full height) */
+      .bgimg-1 {
+        background-image: url('images/hero1.jpg');
+        min-height: 100%;
+      }
+      
+      /* Second image (Portfolio) */
+      .bgimg-2 {
+        background-image: url("images/hero2.png");
+        min-height: 400px;
+      }
+      
+      /* Third image (Contact) */
+      .bgimg-3 {
+        background-image: url("images/hero3.jpg");
+        min-height: 400px;
+      }
+      
+      .w3-wide {letter-spacing: 10px;}
+      .w3-hover-opacity {cursor: pointer;}
+      
+      
+      
+      /* Turn off parallax scrolling for tablets and phones */
+      @media only screen and (max-device-width: 1600px) {
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+          background-attachment: scroll;
+          min-height: 400px;
+        }
+        
+        
+      }
+      
+      @media only screen and (max-device-width: 1400px) {
+        #sidebar {
+          display: none;
+        }
+      
+        .logo {
+          display: none;
+        }
+      
+      }
+      
+        @media only screen and (max-device-width: 940px) {
+          .map {
+            width: 25vw;
+            margin: -120px 0 0 0;
+            }
+        }
+      
+        @media only screen and (min-device-width: 941px) {
+      
+          .map {
+            width: 25vw;
+            margin: -120px 0 0 0;
+            }
+            
+        }
+      
+        
+        @media only screen and (max-device-width: 705px) {
+      
+          .map {
+            display: none;
+          }
+        }
+      
+        @media only screen and (min-device-width: 1700px){
+      
+          .map {
+            margin: -200px;
+          }
+          
+        }
+      
+        @media only screen and (min-device-width: 1201px) {
+      
+          .map {
+            height: 18vw;
+            width: 18vw;
+            margin: -120px 0 0 -75px;
+            }
+      
+        }
+      
+      
+      </style>
   </head>
   <body>
-      <!-- Navbar (sit on top) -->
+
+       <!-- Navbar (sit on top) -->
 <div class="w3-top">
-    <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-        <i class="fa fa-bars"></i>
-      </a>
-      <a href="index.html" class="w3-bar-item w3-button" style="text-decoration: none;">HOME</a>
-      <a href="#about" class="w3-bar-item w3-button w3-hide-small" style="text-decoration: none;"><i class="fa fa-user"></i> ABOUT</a>
-      <a href="appointment.html" class="w3-bar-item w3-button w3-hide-small" style="text-decoration: none;"><i class="fa fa-th"></i> APPOINTMENT</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-hide-small" style="text-decoration: none;"><i class="fa fa-envelope"></i> CONTACT</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-        <i class="fa fa-search"></i>
-      </a>
-    </div>
-  
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">APPOINTMENT</a>
-      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-    </div>
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button" style="text-decoration: none;">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small" style="text-decoration: none;"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="appointment.html" class="w3-bar-item w3-button w3-hide-small" style="text-decoration: none;"><i class="fa fa-th"></i> APPOINTMENT</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small" style="text-decoration: none;"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
   </div>
-  
-  <!-- Sidebar -->
-  <div class="w3-sidebar w3-light-grey w3-bar-block" style="margin: 43px 0 0 0; width: 10vw;" id="sidebar">
-      <a href="locations.html" class="w3-bar-item w3-button" style="text-decoration: none;">Locations</a>
-      <a href="#services" class="w3-bar-item w3-button" style="text-decoration: none;">Services</a>
-      <a href="faqs.html" class="w3-bar-item w3-button" style="text-decoration: none;">FAQS</a>
-    </div>
-    <div class="article-container">
-      <header class="header">
-          <img src="images/logo.png" class="logo">
-          <g id="icon-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <circle class="rellax-non-centered" data-rellax-speed="-1" stroke="#000000" stroke-width="3" fill="#333333" style="opacity: 0.5; transform: translate3d(0px, 0px, 0px);" cx="100.5" cy="100.5" r="100.5"></circle>
-            <circle class="rellax-non-centered" data-rellax-speed="-.5" stroke="#000000" stroke-width="3" fill="#aaa" style="opacity: 0.5; transform: translate3d(0px, 0px, 0px);" opacity="0.9" cx="100.5" cy="99.225" r="79.875"></circle>
-            <g class="rellax-non-centered" data-rellax-speed="2" style="transform: translate3d(0px, 0px, 0px);">
-              <g class="large-boulder" transform="translate(33.000000, 57.000000)">
-                <polygon fill="#E6E7E8" points="36 0.15 83.025 0.15 99 12.525 102.6 24.9 134.1 68.775 106.275 78.6 61.275 73.425 8.625 75.45 0.9 61.125 0.9 44.475 12.225 37.8 23.625 16.2"></polygon>
-                <path d="M8.25,74.325 L31.425,59.7 L47.85,58.5 L64.95,60.6 L83.025,50.325 L108.3,57.15 L134.1,68.775 L106.275,78.6 L61.275,73.425 L37.05,74.1 L8.25,74.325 Z M18.15,27.45 L34.425,28.125 L39.075,33.15 L22.05,39.375 L7.425,51.3 L0.9,45.45 L10.5,38.775 L18.15,27.45 Z M71.175,25.875 L73.875,19.2 L83.85,15.9 L97.5,27.225 L84.375,23.1 L75.825,27.225 L71.175,25.875 Z M37.425,38.85 L58.725,33.15 L70.95,36.375 L79.2,42.525 L74.55,48.225 L59.175,49.275 L45.75,51 L32.85,50.325 L27.225,56.4 L16.35,52.8 L37.425,38.85 Z" fill="#D1D3D4"></path>
-                <polygon id="body" stroke="#000000" stroke-width="3" points="36 0.15 83.025 0.15 99 12.525 102.6 24.9 134.1 68.775 106.275 78.6 61.275 73.425 8.625 75.45 0.9 61.125 0.9 44.475 12.225 37.8 23.625 16.2"></polygon>
-              </g>
-            </g>
-            <g class="rellax-non-centered" data-rellax-speed="1.5" style="transform: translate3d(0px, 0px, 0px);">
-              <g class="medium-boulder" transform="translate(108.750000, 125.250000)">
-                  <polygon fill="#F1F2F2" points="0.525 14.025 10.5 3.3 30.675 0.15 38.925 7.05 43.05 20.85 24.45 27.375 4.575 24.75"></polygon>
-                  <polygon fill="#D1D3D4" points="0.525 13.8 18.6 19.35 30.975 18.225 40.275 11.55 43.05 20.625 24.45 27.225 4.575 24.525"></polygon>
-                  <polygon stroke="#000000" stroke-width="3" points="0.525 13.8 10.5 3.075 30.675 0 38.925 6.9 43.05 20.625 24.45 27.225 4.575 24.525"></polygon>
-              </g>
-            </g>
-            <g class="rellax-non-centered" data-rellax-speed="1.25" style="transform: translate3d(0px, 0px, 0px);">
-              <g class="small-boulder" transform="translate(70.500000, 123.750000)">
-                  <polygon fill="#F1F2F2" points="8.85 2.925 20.025 0 31.125 8.475 33.9 19.425 11.025 26.1 0.225 16.725 5.1 3.825"></polygon>
-                  <polygon fill="#E6E7E8" points="3.9 6.975 14.325 17.625 26.1 12 32.025 12.075 33.9 19.425 11.025 26.1 0.525 15.6"></polygon>
-                  <polygon stroke="#000000" stroke-width="3" points="8.85 2.925 20.025 0 31.125 8.475 33.9 19.425 11.025 26.1 0.225 16.725 5.1 3.825"></polygon>
-              </g>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">APPOINTMENT</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="margin: 43px 0 0 0; width: 7vw;" id="sidebar">
+    <a href="locations.html" class="w3-bar-item w3-button" style="text-decoration: none;">Locations</a>
+    <a href="#services" class="w3-bar-item w3-button" style="text-decoration: none;">Services</a>
+    <a href="faqs.html" class="w3-bar-item w3-button" style="text-decoration: none;">FAQS</a>
+  </div>
+
+  <div class="bgimg-1 w3-display-container" id="home">
+    <img src="images/logo.png" alt="logo" class="logo">
+</div>
+  <div class="article-container">
+    <header class="header">
+        <img src="" class="logo">
+        <g id="icon-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <circle class="rellax-non-centered" data-rellax-speed="-1" stroke="#000000" stroke-width="3" fill="#333333" style="opacity: 0.5; transform: translate3d(0px, 0px, 0px);" cx="100.5" cy="100.5" r="100.5"></circle>
+          <circle class="rellax-non-centered" data-rellax-speed="-.5" stroke="#000000" stroke-width="3" fill="#aaa" style="opacity: 0.5; transform: translate3d(0px, 0px, 0px);" opacity="0.9" cx="100.5" cy="99.225" r="79.875"></circle>
+          <g class="rellax-non-centered" data-rellax-speed="2" style="transform: translate3d(0px, 0px, 0px);">
+            <g class="large-boulder" transform="translate(33.000000, 57.000000)">
+              <polygon fill="#E6E7E8" points="36 0.15 83.025 0.15 99 12.525 102.6 24.9 134.1 68.775 106.275 78.6 61.275 73.425 8.625 75.45 0.9 61.125 0.9 44.475 12.225 37.8 23.625 16.2"></polygon>
+              <path d="M8.25,74.325 L31.425,59.7 L47.85,58.5 L64.95,60.6 L83.025,50.325 L108.3,57.15 L134.1,68.775 L106.275,78.6 L61.275,73.425 L37.05,74.1 L8.25,74.325 Z M18.15,27.45 L34.425,28.125 L39.075,33.15 L22.05,39.375 L7.425,51.3 L0.9,45.45 L10.5,38.775 L18.15,27.45 Z M71.175,25.875 L73.875,19.2 L83.85,15.9 L97.5,27.225 L84.375,23.1 L75.825,27.225 L71.175,25.875 Z M37.425,38.85 L58.725,33.15 L70.95,36.375 L79.2,42.525 L74.55,48.225 L59.175,49.275 L45.75,51 L32.85,50.325 L27.225,56.4 L16.35,52.8 L37.425,38.85 Z" fill="#D1D3D4"></path>
+              <polygon id="body" stroke="#000000" stroke-width="3" points="36 0.15 83.025 0.15 99 12.525 102.6 24.9 134.1 68.775 106.275 78.6 61.275 73.425 8.625 75.45 0.9 61.125 0.9 44.475 12.225 37.8 23.625 16.2"></polygon>
             </g>
           </g>
-        </svg>
-        <h1 class="heading rellax-non-centered" data-rellax-speed="-5" style="transform: translate3d(0px, 0px, 0px); color: rgb(110, 156, 255); margin-bottom: 200px;">Frequently Asked Questions</h1>
-      </header>
-      <article class="content">
+          <g class="rellax-non-centered" data-rellax-speed="1.5" style="transform: translate3d(0px, 0px, 0px);">
+            <g class="medium-boulder" transform="translate(108.750000, 125.250000)">
+                <polygon fill="#F1F2F2" points="0.525 14.025 10.5 3.3 30.675 0.15 38.925 7.05 43.05 20.85 24.45 27.375 4.575 24.75"></polygon>
+                <polygon fill="#D1D3D4" points="0.525 13.8 18.6 19.35 30.975 18.225 40.275 11.55 43.05 20.625 24.45 27.225 4.575 24.525"></polygon>
+                <polygon stroke="#000000" stroke-width="3" points="0.525 13.8 10.5 3.075 30.675 0 38.925 6.9 43.05 20.625 24.45 27.225 4.575 24.525"></polygon>
+            </g>
+          </g>
+          <g class="rellax-non-centered" data-rellax-speed="1.25" style="transform: translate3d(0px, 0px, 0px);">
+            <g class="small-boulder" transform="translate(70.500000, 123.750000)">
+                <polygon fill="#F1F2F2" points="8.85 2.925 20.025 0 31.125 8.475 33.9 19.425 11.025 26.1 0.225 16.725 5.1 3.825"></polygon>
+                <polygon fill="#E6E7E8" points="3.9 6.975 14.325 17.625 26.1 12 32.025 12.075 33.9 19.425 11.025 26.1 0.525 15.6"></polygon>
+                <polygon stroke="#000000" stroke-width="3" points="8.85 2.925 20.025 0 31.125 8.475 33.9 19.425 11.025 26.1 0.225 16.725 5.1 3.825"></polygon>
+            </g>
+          </g>
+        </g>
+      </svg>
+      <h1 class="heading rellax-non-centered" data-rellax-speed="-5" style="transform: translate3d(0px, 0px, 0px); color: rgb(110, 156, 255); margin-bottom: 400px;">Frequently Asked Questions</h1>
+    </header>
+    <article class="content">
 
-        <p id="about"><span style="color: rgba(70, 128, 254, 0.865);">Q: "When do I need to see a therapist"?</span> <br> A: You will usually be reffered to a physical therapy clinic by another helthcare provider. In most cases, after an injury, or being diagnosed with certain conditions may lead you to seek help from a physical therapy clinic. If you live in Florida, there is direct access and you do not need a refferal. </p>
+      <p id="about"><span style="color: rgba(70, 128, 254, 0.865);">Q: "When do I need to see a therapist"?</span> <br> A: You will usually be reffered to a physical therapy clinic by another helthcare provider. In most cases, after an injury, or being diagnosed with certain conditions may lead you to seek help from a physical therapy clinic. If you live in Florida, there is direct access and you do not need a refferal. </p>
 
-        <div class="floating-rocks front-one rellax" data-rellax-speed="8" style="transform: translate3d(0px, 947px, 0px);">
-          <img src="images/help1.jpg" width="200px">
-        </div>
+      <div class="floating-rocks front-one rellax" data-rellax-speed="8" style="transform: translate3d(0px, 947px, 0px);">
+        <img src="images/help1.jpg" width="200px">
+      </div>
 
-        <p><span style="color: rgba(70, 128, 254, 0.865);" id="services">Q: "What insurance is accepted at FirstHand Therapy"?</span> <br> A: Cigna, United HealthCare, AMBetter, Blue Cross Blue Shield, TriCare, AvMed, Humana, Medicare, and Workers Compensation Insurances. </p>
+      <p><span style="color: rgba(70, 128, 254, 0.865);" id="services">Q: "What insurance is accepted at FirstHand Therapy"?</span> <br> A: Cigna, United HealthCare, AMBetter, Blue Cross Blue Shield, TriCare, AvMed, Humana, Medicare, and Workers Compensation Insurances. </p>
 
-        <div class="floating-rocks back-one rellax" data-rellax-speed="-2" style="transform: translate3d(0px, -464px, 0px);">
-          <img src="images/hand.jpg" width="500px">
-        </div>
+      <div class="floating-rocks back-one rellax" data-rellax-speed="-2" style="transform: translate3d(0px, -464px, 0px);">
+        <img src="images/hand.jpg" width="500px">
+      </div>
 
-        <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What if I dont have insurance"?</span> <br> A: Patients may pay with Debit/Credit and cash is accepted. </p>
+      <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What if I dont have insurance"?</span> <br> A: Patients may pay with Debit/Credit and cash is accepted. </p>
 
-        <div class="floating-rocks front-two rellax" data-rellax-speed="3" style="transform: translate3d(0px, 1500px, 0px);">
-          <img src="images/faqs.jpg" width="150px" style="opacity: 0.3;">
-        </div>
+      <div class="floating-rocks front-two rellax" data-rellax-speed="3" style="transform: translate3d(0px, 1500px, 0px);">
+        <img src="images/faqs.jpg" width="150px" style="opacity: 0.3;">
+      </div>
 
-        <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What happens if I miss my appointment"?</span> <br> A: You may reshcedule a visit by calling the office or you can make a new appointment on our website. </p>
+      <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What happens if I miss my appointment"?</span> <br> A: You may reshcedule a visit by calling the office or you can make a new appointment on our website. </p>
 
-        <div class="floating-rocks back-two rellax" data-rellax-speed="-3" style="transform: translate3d(0px, -846px, 0px);">
-          <img src="images/handheart.jpg" width="400px">
-        </div>
+      <div class="floating-rocks back-two rellax" data-rellax-speed="-3" style="transform: translate3d(0px, -846px, 0px);">
+        <img src="images/handheart.jpg" width="400px">
+      </div>
 
-        <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What if I dont speak English"?</span> <br> A: We have staff on site who speak multiple languages including Spanish and Creol.   </p>
+      <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What if I dont speak English"?</span> <br> A: We have staff on site who speak multiple languages including Spanish and Creol.   </p>
 
-        <div class="floating-rocks planet-earth rellax" data-rellax-speed="-4" style="transform: translate3d(0px, -1948px, 0px);">
-          <img src="images/location1.jpg" width="100px" style="opacity: 0.5;">
-        </div>
+      <div class="floating-rocks planet-earth rellax" data-rellax-speed="-4" style="transform: translate3d(0px, -1948px, 0px);">
+        <img src="images/location1.jpg" width="100px" style="opacity: 0.5;">
+      </div>
 
-        <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What if I think I have Covid-19"?</span> <br> A: If you think you have any Covid-19 like symptoms, we ask that you seek medical attention and discontinue your visits until you have been tested and recieve negative results and/or quarantined for at least 14 days. Please and Thank You!</p>
+      <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What if I think I have Covid-19"?</span> <br> A: If you think you have any Covid-19 like symptoms, we ask that you seek medical attention and discontinue your visits until you have been tested and recieve negative results and/or quarantined for at least 14 days. Please and Thank You!</p>
 
-      </article>
+    </article>
 
-      <footer >
-        <p id="contact" class="credit">Images from <a href="https://unsplash.com/">Unsplash</a> ·
-        Parallax by <a href="https://github.com/dixonandmoe/rellax">Rellax.js</a></p>
-      </footer>
+    <footer >
+      <p id="contact" class="credit">Images from <a href="https://unsplash.com/">Unsplash</a> ·
+      Parallax by <a href="https://github.com/dixonandmoe/rellax">Rellax.js</a></p>
+    </footer>
 
-    </div>
+  </div>
 
-    <div class="modal-container">
-      <article class="modal">
-        <h2>FirstHand Weekly</h2>
-        <p>Subscribe by Email and receive important updates, interesting facts, and other news directly to your inbox!</p>
-        <form action="https://www.getrevue.co/profile/cssanimation/add_subscriber" method="post">
-          <input id="subscribe-email" type="email" value="" placeholder="Your email" name="member[email]" class="email">
-          <input type="submit" name="member[subscribe]" class="button" value="Subscribe">
-        </form>
-      <p><a href="#" class="close" id="close-modal">No thanks</a></p>
-      </article>
-    </div>
+  <div class="modal-container">
+    <article class="modal">
+      <h2>FirstHand Weekly</h2>
+      <p>Subscribe by Email and receive important updates, interesting facts, and other news directly to your inbox!</p>
+      <form action="https://www.getrevue.co/profile/cssanimation/add_subscriber" method="post">
+        <input id="subscribe-email" type="email" value="" placeholder="Your email" name="member[email]" class="email">
+        <input type="submit" name="member[subscribe]" class="button" value="Subscribe">
+      </form>
+    <p><a href="#" class="close" id="close-modal">No thanks</a></p>
+    </article>
+  </div>
 
-    <script src="rellax.min.js"></script>
+ 
+
+    <script src="./rellax.min.js"></script>
     <script>
       var rellax = new Rellax('.rellax', {
         center: true
@@ -177,9 +267,11 @@ height: 100vh;
       var rellaxNonCentered = new Rellax('.rellax-non-centered', {
         center: false
       });
+
+      
     </script>
 
-    <script src="jquery.js"></script>
-    <script src="mouseleave.js"></script>
-  
-</body></html>
+    <script src="/jquery.js"></script>
+    <script src="./mouseleave.js"></script>
+  </body>
+</html>
