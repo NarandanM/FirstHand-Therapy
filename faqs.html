@@ -14,8 +14,41 @@ body, html {
   height: 100%;
   color: #777;
   line-height: 1.8;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
+.container {
+
+height: 100vh;
+}
+
+.logo {
+  width: 150px;
+  width: 150px;
+  float: right;
+  position: relative;
+  
+  
+}
+
+
+@media only screen and (max-device-width: 1200px) {
+  #sidebar {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+@media only screen and (min-device-width: 1850px) {
+
+  #sidebar {
+    display: none;
+  }
+}
 
 </style>
   </head>
@@ -45,14 +78,14 @@ body, html {
   </div>
   
   <!-- Sidebar -->
-  <div class="w3-sidebar w3-light-grey w3-bar-block" style="margin: 43px 0 0 0; width: 155px;">
+  <div class="w3-sidebar w3-light-grey w3-bar-block" style="margin: 43px 0 0 0; width: 10vw;" id="sidebar">
       <a href="locations.html" class="w3-bar-item w3-button" style="text-decoration: none;">Locations</a>
       <a href="#services" class="w3-bar-item w3-button" style="text-decoration: none;">Services</a>
       <a href="faqs.html" class="w3-bar-item w3-button" style="text-decoration: none;">FAQS</a>
     </div>
     <div class="article-container">
       <header class="header">
-          <img src="/images/logo.png" width="150px" style="margin: 35px 0 0 1455px;">
+          <img src="/images/logo.png" class="logo">
           <g id="icon-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <circle class="rellax-non-centered" data-rellax-speed="-1" stroke="#000000" stroke-width="3" fill="#333333" style="opacity: 0.5; transform: translate3d(0px, 0px, 0px);" cx="100.5" cy="100.5" r="100.5"></circle>
             <circle class="rellax-non-centered" data-rellax-speed="-.5" stroke="#000000" stroke-width="3" fill="#aaa" style="opacity: 0.5; transform: translate3d(0px, 0px, 0px);" opacity="0.9" cx="100.5" cy="99.225" r="79.875"></circle>
@@ -98,7 +131,7 @@ body, html {
         <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What if I dont have insurance"?</span> <br> A: Patients may pay with Debit/Credit and cash is accepted. </p>
 
         <div class="floating-rocks front-two rellax" data-rellax-speed="3" style="transform: translate3d(0px, 1500px, 0px);">
-          <img src="/images/faqs.jpg" width="150px">
+          <img src="/images/faqs.jpg" width="150px" style="opacity: 0.3;">
         </div>
 
         <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What happens if I miss my appointment"?</span> <br> A: You may reshcedule a visit by calling the office or you can make a new appointment on our website. </p>
@@ -110,7 +143,7 @@ body, html {
         <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What if I dont speak English"?</span> <br> A: We have staff on site who speak multiple languages including Spanish and Creol.   </p>
 
         <div class="floating-rocks planet-earth rellax" data-rellax-speed="-4" style="transform: translate3d(0px, -1948px, 0px);">
-          <img src="/images/location1.jpg" width="100px">
+          <img src="/images/location1.jpg" width="100px" style="opacity: 0.5;">
         </div>
 
         <p><span style="color: rgba(70, 128, 254, 0.865);">Q: "What if I think I have Covid-19"?</span> <br> A: If you think you have any Covid-19 like symptoms, we ask that you seek medical attention and discontinue your visits until you have been tested and recieve negative results and/or quarantined for at least 14 days. Please and Thank You!</p>

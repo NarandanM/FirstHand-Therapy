@@ -7,43 +7,39 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-}
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+  body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  .container {
+  
+    height: 100vh;
+  }
+  
+  .logo {
+    width: 150px;
+    width: 150px;
+    float: right;
+    position: relative;
+    
+  }
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  .info {
 
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('/images/appointment.jpg');
-  min-height: 100%;
-}
+    color: red;
 
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/images/hero2.png");
-  min-height: 400px;
-}
+  }
 
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("/images/hero3.jpg");
-  min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-input[type=text], select {
+  div .info {
+    margin: 5% 0 0 30%;
+  }
+  
+  input[type=text], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -54,8 +50,8 @@ input[type=text], select {
 }
 
 input[type=submit] {
-  width: 25%;
-  background-color: rgba(70, 128, 254, 0.865);
+  width: 100%;
+  background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -68,24 +64,124 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-div .form1{
-    width: 50vw;
-    margin: 50px 0 100px 475px;
+div #appointments {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
-  font-size: 20px;
 }
 
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
+.form1 {
+
+  width: 50vw;
+  margin: auto;
+  border: 3px solid rgba(0, 0, 0, 0.447);
+  padding: 5px;
+  background-color: rgb(230, 229, 229);
+}
+  
+  /* Create a Parallax Effect */
   .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* First image (Logo. Full height) */
+  .bgimg-1 {
+    background-image: url('/images/hero1.jpg');
+    min-height: 100%;
+  }
+  
+  /* Second image (Portfolio) */
+  .bgimg-2 {
+    background-image: url("/images/hero2.png");
     min-height: 400px;
   }
-}
-</style>
+  
+  /* Third image (Contact) */
+  .bgimg-3 {
+    background-image: url("/images/hero3.jpg");
+    min-height: 400px;
+  }
+  
+  .w3-wide {letter-spacing: 10px;}
+  .w3-hover-opacity {cursor: pointer;}
+  
+  
+  
+  /* Turn off parallax scrolling for tablets and phones */
+  @media only screen and (max-device-width: 1600px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: scroll;
+      min-height: 400px;
+    }
+    
+    
+  }
+  
+  @media only screen and (max-device-width: 1400px) {
+    #sidebar {
+      display: none;
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+  }
+  
+    @media only screen and (max-device-width: 940px) {
+      .map {
+        width: 25vw;
+        margin: -120px 0 0 0;
+        }
+    }
+  
+    @media only screen and (min-device-width: 941px) {
+  
+      .map {
+        width: 25vw;
+        margin: -120px 0 0 0;
+        }
+        
+    }
+  
+    
+    @media only screen and (max-device-width: 705px) {
+  
+      .map {
+        display: none;
+      }
+
+      .info {
+        display:  none;
+      }
+    }
+  
+    @media only screen and (min-device-width: 1700px){
+  
+      .map {
+        margin: -200px;
+      }
+      
+    }
+  
+    @media only screen and (min-device-width: 1201px) {
+  
+      .map {
+        height: 18vw;
+        width: 18vw;
+        margin: 0px 0 0 0px;
+        }
+  
+    }
+  
+  
+  </style>
 <body>
+
+  <div class="container">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -112,7 +208,7 @@ div .form1{
   </div>
   
   <!-- Sidebar -->
-  <div class="w3-sidebar w3-light-grey w3-bar-block" style="margin: 43px 0 0 0; width: 155px;">
+  <div class="w3-sidebar w3-light-grey w3-bar-block" style="margin: 43px 0 0 0; width: 10vw;" id="sidebar">
       <a href="locations.html" class="w3-bar-item w3-button">Locations</a>
       <a href="#services" class="w3-bar-item w3-button">Services</a>
       <a href="faqs.html" class="w3-bar-item w3-button">FAQS</a>
@@ -120,9 +216,7 @@ div .form1{
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <img src="/images/logo.png" width="150px" style="margin: -650px 0 0 1400px;" alt="logo">
-  </div>
+  <img src="/images/logo.png" alt="logo" class="logo">
 </div>
 
 <div class="w3-content w3-container w3-padding-64" id="about">
@@ -146,7 +240,7 @@ div .form1{
     </div>
   </div>
   
-  <div class="w3-row w3-center w3-dark-grey w3-padding-16" style="margin-left: 150px;">
+  <div class="w3-row w3-center w3-dark-grey w3-padding-16">
       <div class="w3-quarter w3-section">
           <span class="w3-xlarge">8</span><br>
           Therapist
@@ -165,11 +259,13 @@ div .form1{
     </div>
   </div>
 
-  <p style="margin: 150px 0 0 575px; font-size: 25px; color: red; font-style: italic;">Please enter a valid email and phone number. <br> A member of our team will contact you as soon as possible. </p> <hr>
+  <div>
+  <p class="info">Please enter a valid email and phone number. <br> A member of our team will contact you as soon as possible. </p> <hr>
+  
 
-<div>
-<form class="form1" id="appointment">
-    <h1>Make An Appointment</h1>
+<div id="appointment">
+<form class="form1">
+    <h3>Make An Appointment</h3>
     <label for="fname">First name:</label><br>
     <input type="text" id="fname" name="fname"><br>
     <label for="lname">Last name:</label><br>
@@ -205,9 +301,10 @@ div .form1{
     <label for="male">Yes</label><br>
     <input type="radio" id="no" name="reffered" value="No">
     <label for="female">No</label><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" class="submit">
   </form>
 
+  </div>
   </div>
 
 
@@ -218,11 +315,11 @@ div .form1{
 
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.0626422931373!2d-80.13538918497895!3d25.76849438363365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b4929f108bd7%3A0xfa10852c65eae94!2sOcean%20Dr%2C%20Miami%20Beach%2C%20FL%2033139!5e0!3m2!1sen!2sus!4v1607735336017!5m2!1sen!2sus" style="margin: -120px 0 0 -200px;" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" width="500px" height="500px"></iframe>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.0626422931373!2d-80.13538918497895!3d25.76849438363365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b4929f108bd7%3A0xfa10852c65eae94!2sOcean%20Dr%2C%20Miami%20Beach%2C%20FL%2033139!5e0!3m2!1sen!2sus!4v1607735336017!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Miami, US<br>
+        <a href="locations.html" style="text-decoration: none; color: rgb(53, 129, 18);"><i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Miami, US<br></a>
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <a href="mailto:firsthandpt@mail.com" style="text-decoration: none;">Email: firsthandpt@mail.com</a><br>
       </div>
@@ -258,6 +355,8 @@ div .form1{
   </div>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
+
+</div>
  
 <script>
 // Modal Image Gallery
